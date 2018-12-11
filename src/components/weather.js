@@ -3,6 +3,10 @@ import '../App.css';
 
 import Axios from 'axios';
 
+import Rainy from './rainy.js'
+import Windy from './windy.js'
+import Temp from './temp.js'
+
 class Weather extends Component {
   constructor() {
     super();
@@ -120,14 +124,22 @@ class Weather extends Component {
         <h2>What should I wear today?</h2>
         <div>
 
-          {this.roundTemp()}
+          <Temp 
+            whatToWear={this.whatToWear}
+            roundTemp={this.roundTemp}
+            feelsTemp={this.state.feelsTemp}
+            actualTemp={this.state.actualTemp}
+          />
 
-          {this.whatToWear()}
+          <Windy 
+            wind={this.state.wind}
+            isItWindy={this.isItWindy}
+          />
 
-
-          {this.isItWindy()}
-          {this.isItRainy()}
-
+          <Rainy 
+            rain={this.state.rain}
+            isItRainy={this.isItRainy}
+          />
 
           
         </div>
