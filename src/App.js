@@ -42,50 +42,59 @@ class App extends Component {
     var temp = this.state.feelsTemp;
 
     var rainDiv = {
-      backgroundColor: 'pink',
-      color: 'white',
-    };
-
-    var sunDiv = {
-      backgroundColor: 'orange',
-      color: 'white',
+      backgroundImage: 'url(https://images.unsplash.com/photo-1512511708753-3150cd2ec8ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80)',
+      color: 'hotpink',
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
     };
 
     var clearDiv = {
-      backgroundColor: 'green',
+      backgroundImage: 'url(https://images.unsplash.com/photo-1509218541462-aa68e407d0ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80)',
+      color: 'blue',
+      backgroundSize: 'cover',
+    };
+
+    var sunDiv = {
+      backgroundImage: 'url(https://images.unsplash.com/photo-1543770048-34a65b19b59a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1476&q=80)',
       color: 'white',
     };
 
 
     if (rainPercent > 25) {
       return (
-        <h1 style={rainDiv}>
-          Weather to Wear
-        </h1>
+        <header className="App-header" style={rainDiv}>
+          <h1>
+            Weather to Wear
+          </h1>
+        </header>
       ) 
     }
-    if (temp > 25) {
+    if (temp >= 25) {
       return (
-        <h1 style={sunDiv}>
-          Weather to Wear{temp}
-        </h1>
+        <header className="App-header" style={sunDiv}>
+          <h1>
+            Weather to Wear
+          </h1>
+        </header>
       ) 
-    } else {
+    }
+    if (temp < 25) {
       return (
-        <h1 style={clearDiv}>
-          Weather to Wear
-        </h1>
+        <header className="App-header" style={clearDiv}>
+          <h1>
+            Weather to Wear
+          </h1>
+        </header>
       ) 
     }
 
   }
 
   render() {
+
     return (
       <div className="App">
-        <header className="App-header">
           {this.headerLogic()}
-        </header>
 
         <div>
 
