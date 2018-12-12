@@ -25,9 +25,8 @@ class Weather extends Component {
     var key = '63c7e1fe04debd05e2a196e39bc9e9c4';
 
     Axios
-      .get(`https://api.darksky.net/forecast/${key}/${latitude},${longitude}?units=si`)
+      .get(`https://api.darksky.net/forecast/${key}/${latitude},${longitude}?units=uk2`)
       .then((response) => {
-        console.log(response);
 
         var feelstemp = response.data.currently.apparentTemperature;
         var actualtemp = response.data.currently.temperature;
