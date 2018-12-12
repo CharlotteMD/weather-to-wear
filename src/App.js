@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Weather from './components/weather';
+import Wardrobe from './components/wardrobe';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <div>
 
           <Weather />
+          <Wardrobe />
 
         </div>
 

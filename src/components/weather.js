@@ -3,9 +3,9 @@ import '../App.css';
 
 import Axios from 'axios';
 
-import Rainy from './rainy.js'
-import Windy from './windy.js'
-import Temp from './temp.js'
+import Rainy from './rainy.js';
+import Windy from './windy.js';
+import Temp from './temp.js';
 
 class Weather extends Component {
   constructor() {
@@ -127,8 +127,6 @@ class Weather extends Component {
           <Temp 
             whatToWear={this.whatToWear}
             roundTemp={this.roundTemp}
-            feelsTemp={this.state.feelsTemp}
-            actualTemp={this.state.actualTemp}
           />
 
           <Windy 
@@ -140,7 +138,6 @@ class Weather extends Component {
             rain={this.state.rain}
             isItRainy={this.isItRainy}
           />
-
           
         </div>
 
