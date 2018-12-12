@@ -121,7 +121,7 @@ class Weather extends Component {
   render() {
     return (
       <div className="Weather">
-        <h2>What should I wear today?</h2>
+        <h2>Today's Weather</h2>
         <div>
 
           <Temp 
