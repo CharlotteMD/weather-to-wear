@@ -101,10 +101,10 @@ class Wardrobe extends Component {
         return (
             <div>
                 
-                <h1>What shall I wear today?</h1>
+                <h2>What shall I wear today?</h2>
                 {this.whichSuit()}
 
-                <h1>What coat do I need?</h1>
+                <h2>What coat do I need?</h2>
                 {this.whichCoat()}
 
                 
