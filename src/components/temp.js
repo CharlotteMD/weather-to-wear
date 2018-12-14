@@ -12,7 +12,7 @@ const Temp = ({ feelsTemp, actualTemp, whatToWear, roundTemp }) => {
 
           <div className="thermometer">
             <div className="mercury">
-              <meter min="-10" max="30" value={actualTemp}></meter>
+              <meter id="tempMeter" min="-10" max="30" value={actualTemp}></meter>
             </div>
             <div id="labels">
               <ul>
@@ -23,8 +23,7 @@ const Temp = ({ feelsTemp, actualTemp, whatToWear, roundTemp }) => {
                 <li>-10</li>
               </ul>
             </div>
-            <div className="bulb">
-            </div>
+            <div className="bulb"></div>
           </div>
         </div>
     );

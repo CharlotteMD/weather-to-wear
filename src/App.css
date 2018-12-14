@@ -54,36 +54,120 @@ footer {
   footer {
     bottom: -700px;
   }
+
+  .weatherDiv {
+    background-color: #FFFF99;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+  }
+
+  .wardrobeDiv {
+    background-color: #80DAFB;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+  }
 }
 
 @media only screen and (max-width: 850px) {
   footer {
     bottom: -750px;
   }
+
+    .weatherDiv {
+      background-color: #FFFF99;
+      margin: 0px;
+      padding: 0px;
+      border: none;
+    }
+
+    .wardrobeDiv {
+      background-color: #80DAFB;
+      margin: 0px;
+      padding: 0px;
+      border: none;
+    }
 }
 
 @media only screen and (max-width: 700px) {
   footer {
     bottom: -800px;
   }
+
+    .weatherDiv {
+      background-color: #FFFF99;
+      margin: 0px;
+      padding: 0px;
+      border: none;
+    }
+
+    .wardrobeDiv {
+      background-color: #80DAFB;
+      margin: 0px;
+      padding: 0px;
+      border: none;
+    }
 }
 
 @media only screen and (max-width: 450px) {
   footer {
     bottom: -400px;
   }
+
+    .weatherDiv {
+      background-color: #FFFF99;
+      margin: 0px;
+      padding: 0px;
+      border: none;
+    }
+
+    .wardrobeDiv {
+      background-color: #80DAFB;
+      margin: 0px;
+      padding: 0px;
+      border: none;
+    }
 }
 
 @media only screen and (max-width: 400px) {
   footer {
     bottom: -500px;
   }
+
+    .weatherDiv {
+      background-color: #FFFF99;
+      margin: 0px;
+      padding: 0px;
+      border: none;
+    }
+
+    .wardrobeDiv {
+      background-color: #80DAFB;
+      margin: 0px;
+      padding: 0px;
+      border: none;
+    }
 }
 
 @media only screen and (max-width: 350px) {
   footer {
     bottom: -600px;
   }
+
+    .weatherDiv {
+      background-color: #FFFF99;
+      margin: 0px;
+      padding: 0px;
+      border: none;
+    }
+
+    .wardrobeDiv {
+      background-color: #80DAFB;
+      margin: 0px;
+      padding: 0px;
+      border: none;
+    }
 }
 
 

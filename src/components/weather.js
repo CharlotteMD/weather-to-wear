@@ -63,8 +63,16 @@ class Weather extends Component {
 
   isItRainy = () => {
     var rainPercent = Math.round(this.state.rain*100);
+
     return (
-      <p>There is a {rainPercent}% chance of rain today</p>
+      <div>
+        {rainPercent > 0 && (
+          <div className="probability">
+            <meter className="rain" min="0" max="100" value={rainPercent}></meter>
+          </div>
+        )}
+        <p>There is a {rainPercent}% chance of rain today</p>
+      </div>
     )
 
   }
@@ -82,10 +90,16 @@ class Weather extends Component {
 
     var cold = {
       color: '#77DDE7',
+      fontSize: 'bold',
     };
 
     var hot = {
       color: '#FF7538',
+      fontSize: 'bold',
+    };
+
+    var average = {
+      fontSize: 'bold',
     };
 
 
@@ -105,7 +119,7 @@ class Weather extends Component {
     };
     if ((temp < 15)) {
       return (
-        <p>
+        <p style={average}>
           Fairly mild today. Take your coat and a jumper but you won't freeze today!
         </p>
       )
@@ -131,8 +145,7 @@ class Weather extends Component {
     return (
       <div className="Weather">
         <h2>Today's Weather</h2>
-        <div>
-
+        <div className="weatherDiv">
           <Temp
             whatToWear={this.whatToWear}
             roundTemp={this.roundTemp}

@@ -153,7 +153,7 @@ class Wardrobe extends Component {
 
 
         return (
-            <div>
+            <div className="wardrobeDiv">
 
                 <h3>What shall I wear today?</h3>
                 {this.whichSuit()}
