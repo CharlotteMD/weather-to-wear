@@ -10,8 +10,22 @@ const Temp = ({ feelsTemp, actualTemp, whatToWear, roundTemp }) => {
             {whatToWear()}
           </div>
 
-          <meter min="-10" max="30" value={actualTemp}></meter>
-
+          <div className="thermometer">
+            <div className="mercury">
+              <meter min="-10" max="30" value={actualTemp}></meter>
+            </div>
+            <div id="labels">
+              <ul>
+                <li>30</li>
+                <li>20</li>
+                <li>10</li>
+                <li><span>0</span></li>
+                <li>-10</li>
+              </ul>
+            </div>
+            <div className="bulb">
+            </div>
+          </div>
         </div>
     );
 };

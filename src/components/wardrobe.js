@@ -78,21 +78,21 @@ class Wardrobe extends Component {
         if ((rainPercent < 25) && (temp < 10)) {
             return (
               <p>
-                <span class="fas fa-user-secret" style={purpleCoat}></span>
+                <span className="fas fa-user-secret" style={purpleCoat}></span>
                 Dry but cold today. Take your purple coat.
               </p>)
         }
         if ((rainPercent >= 25) && (temp < 7)) {
             return (
               <p>
-                <span class="fas fa-user-secret" style={navyMac}></span>
+                <span className="fas fa-user-secret" style={navyMac}></span>
                 Today it will be rainy and cold. Wrap up warm but wear your Navy Mac as it's going to rain! Don't forget your gloves and scarf!
               </p>)
         }
         if (temp < 15) {
             return (
               <p>
-                <span class="fas fa-user-secret" style={purpleCoat}></span>
+                <span className="fas fa-user-secret" style={purpleCoat}></span>
                 A mild day today - wear your Navy Mac.
               </p>)
         }
