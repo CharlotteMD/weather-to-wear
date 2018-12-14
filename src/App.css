@@ -38,27 +38,51 @@ footer {
   margin-top: 10px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1400px) {
   footer {
     bottom: -100px;
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 1100px) {
   footer {
     bottom: -350px;
   }
 }
 
+@media only screen and (max-width: 900px) {
+  footer {
+    bottom: -700px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  footer {
+    bottom: -750px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  footer {
+    bottom: -800px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  footer {
+    bottom: -400px;
+  }
+}
+
 @media only screen and (max-width: 400px) {
   footer {
-    bottom: -450px;
+    bottom: -500px;
   }
 }
 
 @media only screen and (max-width: 350px) {
   footer {
-    bottom: -550px;
+    bottom: -600px;
   }
 }
 
