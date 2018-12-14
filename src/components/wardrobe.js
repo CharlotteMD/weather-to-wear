@@ -12,7 +12,7 @@ class Wardrobe extends Component {
             rain: ''
         };
     }
-        
+
     componentDidMount() {
         var latitude = 51.4997;
         var longitude = -0.2353;
@@ -59,17 +59,48 @@ class Wardrobe extends Component {
         var rainPercent = Math.round(this.state.rain * 100);
         var temp = Math.round(this.state.actualTemp);
 
+        var purpleCoat = {
+          color: '#7851A9',
+          fontSize: '48px',
+          padding: '2px',
+          display: 'block',
+          textAlign: 'center',
+        };
+
+        var navyMac = {
+          color: '#1A4876',
+          fontSize: '48px',
+          padding: '2px',
+          display: 'block',
+          textAlign: 'center',
+        };
+
         if ((rainPercent < 25) && (temp < 10)) {
-            return (<p>Dry but cold today. Take your purple coat</p>)
+            return (
+              <p>
+                <span class="fas fa-user-secret" style={purpleCoat}></span>
+                Dry but cold today. Take your purple coat.
+              </p>)
         }
         if ((rainPercent >= 25) && (temp < 7)) {
-            return (<p>Today it will be rainy and cold. Wrap up warm but wear your Navy Mac as it's going to rain! Don't forget your gloves and scarf!</p>)
+            return (
+              <p>
+                <span class="fas fa-user-secret" style={navyMac}></span>
+                Today it will be rainy and cold. Wrap up warm but wear your Navy Mac as it's going to rain! Don't forget your gloves and scarf!
+              </p>)
         }
         if (temp < 15) {
-            return (<p>A mild day today - wear your Navy Mac.</p>)
+            return (
+              <p>
+                <span class="fas fa-user-secret" style={purpleCoat}></span>
+                A mild day today - wear your Navy Mac.
+              </p>)
         }
         if (temp < 27) {
-            return (<p>You can probably get away with just your suit jacket today!</p>)
+            return (
+              <p>
+                You can probably get away with just your suit jacket today!
+              </p>)
         }
         if (temp > 27) {
             return (<p>It's a hotty! Stay hydrated!</p>)
@@ -88,7 +119,7 @@ class Wardrobe extends Component {
 
         return (
             <p>
-                Today you should wear your {javsSuits[whichSuit]} suit with your {javsTies[whichTie]} tie. And don't forget that white shirt!
+              Today you should wear your {javsSuits[whichSuit]} suit with your {javsTies[whichTie]} tie. And don't forget that white shirt!
             </p>)
     }
 
@@ -96,18 +127,18 @@ class Wardrobe extends Component {
     render() {
 
 
-        
+
 
         return (
             <div>
-                
+
                 <h2>What shall I wear today?</h2>
                 {this.whichSuit()}
 
                 <h2>What coat do I need?</h2>
                 {this.whichCoat()}
 
-                
+
             </div>
         );
     }

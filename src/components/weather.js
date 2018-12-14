@@ -33,7 +33,7 @@ class Weather extends Component {
         var wind = response.data.currently.windSpeed;
         var rain = response.data.daily.data[0].precipProbability;
 
-        this.setState({ 
+        this.setState({
           feelstemp: feelstemp,
           actualtemp: actualtemp,
           wind: wind,
@@ -66,14 +66,14 @@ class Weather extends Component {
     return (
       <p>There is a {rainPercent}% chance of rain today</p>
     )
-    
+
   }
 
   roundTemp = () => {
     var roundActual = Math.round(this.state.actualtemp);
     var roundFeels = Math.round(this.state.feelstemp);
     return (
-      <p>It is currently {roundActual}c, although it feels like {roundFeels}c!</p>
+      <p>It is currently {roundActual}°C, although it feels like {roundFeels}°C!</p>
     )
   }
 
@@ -115,7 +115,7 @@ class Weather extends Component {
       )
     };
   }
-  
+
 
   render() {
     return (
@@ -123,21 +123,21 @@ class Weather extends Component {
         <h2>Today's Weather</h2>
         <div>
 
-          <Temp 
+          <Temp
             whatToWear={this.whatToWear}
             roundTemp={this.roundTemp}
           />
 
-          <Windy 
+          <Windy
             wind={this.state.wind}
             isItWindy={this.isItWindy}
           />
 
-          <Rainy 
+          <Rainy
             rain={this.state.rain}
             isItRainy={this.isItRainy}
           />
-          
+
         </div>
 
       </div>
