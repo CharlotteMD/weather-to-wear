@@ -48,7 +48,7 @@ class Weather extends Component {
     if ((this.state.wind >= 5) && (this.state.wind < 10)) {
       return (
         <p>
-          It's a bit windy outside! Perhaps take an extra jumper and don't wear a hat!
+          It's a bit windy outside! Perhaps take an extra jumper!
         </p>
       )
     };
@@ -79,16 +79,26 @@ class Weather extends Component {
 
   whatToWear = () => {
     var temp = this.state.actualtemp;
+
+    var cold = {
+      color: '#77DDE7',
+    };
+
+    var hot = {
+      color: '#FF7538',
+    };
+
+
     if (temp < 0) {
       return (
-        <p>
+        <p style={cold}>
           Baby, it's cold outside! Wrap up warm and don't forget your gloves!
         </p>
       )
     };
     if ((temp < 5)) {
       return (
-        <p>
+        <p style={cold}>
           Pretty cold today! Take a winter coat and don't forget a jumper to keep you warm all day!
         </p>
       )
@@ -102,14 +112,14 @@ class Weather extends Component {
     };
     if ((temp < 25)) {
       return (
-        <p>
+        <p style={hot}>
           It's a lovely day outside! Take a jacket but you won't be cold!
         </p>
       )
     };
     if ((temp > 25)) {
       return (
-        <p>
+        <p style={hot}>
           It's boiling outside! You won't need a coat!
         </p>
       )

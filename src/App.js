@@ -67,7 +67,7 @@ class App extends Component {
             Weather to Wear
           </h1>
         </header>
-      ) 
+      )
     }
     if (temp >= 25) {
       return (
@@ -76,7 +76,7 @@ class App extends Component {
             Weather to Wear
           </h1>
         </header>
-      ) 
+      )
     }
     if (temp < 25) {
       return (
@@ -85,7 +85,60 @@ class App extends Component {
             Weather to Wear
           </h1>
         </header>
-      ) 
+      )
+    }
+
+  }
+
+  footerLogic = () => {
+    var rainPercent = Math.round(this.state.rain * 100);
+    var temp = this.state.feelsTemp;
+
+    var rainDiv = {
+      backgroundImage: 'url(https://images.unsplash.com/photo-1512511708753-3150cd2ec8ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80)',
+      color: 'hotpink',
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+    };
+
+    var clearDiv = {
+      backgroundImage: 'url(https://images.unsplash.com/photo-1509218541462-aa68e407d0ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80)',
+      color: 'blue',
+      backgroundSize: 'cover',
+    };
+
+    var sunDiv = {
+      backgroundImage: 'url(https://images.unsplash.com/photo-1543770048-34a65b19b59a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1476&q=80)',
+      color: 'white',
+    };
+
+
+    if (rainPercent > 25) {
+      return (
+        <footer className="App-header" style={rainDiv}>
+          <h4>
+            Coded By Charlotte for Javed 👩🏻‍💻
+          </h4>
+        </footer>
+      )
+    }
+    if (temp >= 25) {
+      return (
+        <footer className="App-header" style={sunDiv}>
+          <h4>
+            Coded By Charlotte for Javed 👩🏻‍💻
+          </h4>
+        </footer>
+      )
+    }
+    if (temp < 25) {
+      return (
+        <footer className="App-header" style={clearDiv}>
+          <h4>
+            Coded By Charlotte for Javed 👩🏻‍💻
+          </h4>
+        </footer>
+      )
     }
 
   }
@@ -94,7 +147,7 @@ class App extends Component {
 
     return (
       <div className="App">
-          {this.headerLogic()}
+        {this.headerLogic()}
 
         <div>
 
@@ -102,6 +155,8 @@ class App extends Component {
           <Wardrobe />
 
         </div>
+
+        {this.footerLogic()}
 
       </div>
     );

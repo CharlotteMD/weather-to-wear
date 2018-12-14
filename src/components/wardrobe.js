@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Axios from 'axios';
 
+import '../wardrobe.css';
+
 class Wardrobe extends Component {
     constructor() {
         super();
@@ -63,47 +65,68 @@ class Wardrobe extends Component {
           color: '#7851A9',
           fontSize: '48px',
           padding: '2px',
-          display: 'block',
-          textAlign: 'center',
+          justifyContent: 'center'
         };
 
         var navyMac = {
           color: '#1A4876',
           fontSize: '48px',
           padding: '2px',
-          display: 'block',
-          textAlign: 'center',
+          justifyContent: 'center'
         };
+
+        var sunny = {
+          color: 'yellow',
+          fontSize: '48px',
+          padding: '2px',
+          justifyContent: 'center'
+        }
 
         if ((rainPercent < 25) && (temp < 10)) {
             return (
-              <p>
+              <div>
                 <span className="fas fa-user-secret" style={purpleCoat}></span>
-                Dry but cold today. Take your purple coat.
-              </p>)
+                <p>
+                  Dry but cold today. Take your purple coat.
+                </p>
+              </div>
+              )
         }
         if ((rainPercent >= 25) && (temp < 7)) {
             return (
-              <p>
+              <div>
                 <span className="fas fa-user-secret" style={navyMac}></span>
-                Today it will be rainy and cold. Wrap up warm but wear your Navy Mac as it's going to rain! Don't forget your gloves and scarf!
-              </p>)
+                <p>
+                  Today it will be rainy and cold. Wrap up warm but wear your Navy Mac as it's going to rain! Don't forget your gloves and scarf!
+                </p>
+              </div>)
         }
         if (temp < 15) {
             return (
-              <p>
-                <span className="fas fa-user-secret" style={purpleCoat}></span>
-                A mild day today - wear your Navy Mac.
-              </p>)
+              <div>
+                <span className="fas fa-user-secret" style={navyMac}></span>
+                <p>
+                  A mild day today - wear your Navy Mac.
+                </p>
+              </div>)
         }
         if (temp < 27) {
             return (
-              <p>
-                You can probably get away with just your suit jacket today!
-              </p>)
+              <div>
+                <span className="fas fa-sun" style={sunny}></span>
+                <p>
+                  You can probably get away with just your suit jacket today!
+                </p>
+              </div>)
         }
         if (temp > 27) {
-            return (<p>It's a hotty! Stay hydrated!</p>)
+            return (
+              <div>
+                <span className="fas fa-sun" style={sunny}></span>
+                <p>
+                  It's a hotty! Stay hydrated!
+                </p>
+              </div>)
         }
     }
 
@@ -132,11 +155,13 @@ class Wardrobe extends Component {
         return (
             <div>
 
-                <h2>What shall I wear today?</h2>
+                <h3>What shall I wear today?</h3>
                 {this.whichSuit()}
 
-                <h2>What coat do I need?</h2>
-                {this.whichCoat()}
+                <div className="clothes">
+                  <h3>What coat do I need?</h3>
+                  {this.whichCoat()}
+                </div>
 
 
             </div>
